@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Product Details - Restaurant App</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" type="text/css" href="css/custom.css">
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<div class="page-wrap">
+
+		<!-- Product Banner Section -->
+		<section class="product-banner">
+			<div class="product-banner-wrap">
+				<!-- Banner Image -->
+				<div class="banner-img-wrap">
+					<img src="images/recommanded-product-1.jpg" class="home-banner-image img-responsive">
+				</div>
+				<!-- end of Banner Image -->
+			</div>
+			<div class="subpage-header-nav">
+				<div class="row">
+					<div class="col">
+						<a href="index.html" class="icon-btn"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+					</div>
+					<div class="col">
+						<div class="rating-details text-right">
+							<p class="rating-badge"><i class="fa fa-star" aria-hidden="true"></i> <span>5.0</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end of Product Banner Section -->
+
+		<!-- Product Details -->
+		<section class="product-details-wrap">
+			<div class="product-details">
+			  <div class="product-head">
+			  	<div class="row">
+					<div class="col">
+						<h5 class="product-name">Spicy Veg Sandwich</h5>
+					</div>
+					<div class="col">
+						<h4 class="product-price text-right">₹<span>200</span></h4>
+					</div>
+				</div>
+			  </div>
+			  <div class="product-options">
+			  	<p class="prod-sub-heading">Options</p>
+			  	<ul class="prod-opt-list">
+			  		<li class="prod-opt-list-items">
+			  			<a href="#">Less Spicy</a>
+			  		</li>
+			  		<li class="prod-opt-list-items">
+			  			<a href="#">Spicy</a>
+			  		</li>
+			  		<li class="prod-opt-list-items">
+			  			<a href="#">Spicy and Cringy</a>
+			  		</li>
+			  	</ul>
+			  </div>
+			  <div class="product-extras">
+			  	<p class="prod-sub-heading">Extra</p>
+			  	<ul class="prod-opt-list">
+			  		<li class="prod-opt-list-items">
+			  			<a href="#">Regular</a>
+			  		</li>
+			  		<li class="prod-opt-list-items">
+			  			<a href="#">Double Patty</a>
+			  		</li>
+			  		<li class="prod-opt-list-items">
+			  			<a href="#">Double Cheese</a>
+			  		</li>
+			  	</ul>
+			  </div>
+			</div>
+			<div class="footer-btn-wrap">
+				<a href="#" class="footer-btn">Add to Cart</a>
+			</div>
+		</section>
+		<!-- End of Product Details -->
+
+	</div>
+
+	<script type="text/javascript">
+		$('li.prod-opt-list-items a').click(function(){
+			$('li.prod-opt-list-items a').removeClass('active');
+			$(this).addClass('active');
+		})
+	</script>
+</body>
+</html>
