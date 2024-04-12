@@ -79,9 +79,38 @@
 			  		</li>
 			  	</ul>
 			  </div>
+
+			  <div class="prod-ingredient-wrap">
+			  	<div class="prod-ingredient">
+			  		<div class="prod-ingred-head">
+			  			<div class="row">
+			  				<div class="col"><p>Ingredients</p></div>
+			  				<div class="col text-right"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+			  			</div>
+			  		</div>
+			  		<div class="prod-ingred-text">
+			  			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+			  			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			  		</div>
+			  	</div>
+			  </div>
+
 			</div>
 			<div class="footer-btn-wrap">
 				<a href="#" class="footer-btn">Add to Cart</a>
+			</div>
+			<div class="prod-quantity-wrap">
+				<div class="row">
+					<div class="col">
+						<a href="#" class="prod-quan-minus"><i class="fa fa-minus" aria-hidden="true"></i></a>
+					</div>
+					<div class="col">
+						<span class="prod-quantity-val">0</span>
+					</div>
+					<div class="col">
+						<a href="#" class="prod-quan-plus"><i class="fa fa-plus" aria-hidden="true"></i></a>
+					</div>
+				</div>
 			</div>
 		</section>
 		<!-- End of Product Details -->
@@ -92,7 +121,26 @@
 		$('li.prod-opt-list-items a').click(function(){
 			$('li.prod-opt-list-items a').removeClass('active');
 			$(this).addClass('active');
-		})
+		});
+
+		$('a.prod-quan-plus').click(function(){
+		    var CurQuantity = parseInt($('span.prod-quantity-val').html());
+		    $('span.prod-quantity-val').html((CurQuantity+1));    
+		    return false;
+		});
+
+		$('a.prod-quan-minus').click(function(){
+		    var CurQuantity = parseInt($('span.prod-quantity-val').html());
+		    if(CurQuantity > 0)
+		    {
+		    	$('span.prod-quantity-val').html((CurQuantity-1)); 
+		    }   
+		    return false;
+		});
+
+		$('.prod-ingred-head').click(function() {
+		    $(this).parent().toggleClass('ingred-open')
+		});
 	</script>
 </body>
 </html>
